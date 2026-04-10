@@ -13,6 +13,6 @@ void solve(){
             [&](int x, int y) {
                 return a[x][i] < a[y][i];
             });
-    // sorted values of a transfers to p 
+    // stores index of sorted order of a 
     // a remains unchanged 
 } 

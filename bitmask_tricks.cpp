@@ -3,5 +3,7 @@ int la = a & -a;
 
 -a = ~a + 1 --> fact 
 
+a / la = odd part of a 
+
 
 

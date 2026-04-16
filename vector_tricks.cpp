@@ -15,4 +15,10 @@ void solve(){
             });
     // stores index of sorted order of a 
     // a remains unchanged 
+
+
+    reverse(a.begin() , a.end());
+    //reverse the vector 
+    vector<int> reversed_v(v.rbegin(), v.rend()); 
+    // Creates a reversed copy
 } 

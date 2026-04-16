@@ -27,6 +27,9 @@ void solve(){
     // it means 2 rows and n columns same as above 
     // cant take input too 
 
+    vector<vector<array<int,2>>> adj(n);
+    // for saving edges of the graph with index
+    // adj[u].push_back({v , i});
 
     int m; 
     cin>>m;

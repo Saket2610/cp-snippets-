@@ -3,10 +3,11 @@
 using namespace std; 
 
 #define ll       long long
+#define int long long 
 void solve(){
     
 }
-int main(){
+signed main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int t ; cin>>t;

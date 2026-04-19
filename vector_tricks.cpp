@@ -31,4 +31,10 @@ void solve(){
 
     int x = ranges::min_element(a) - a.begin();
     // index of the minimum element in the array a 
+
+    int x = a.back();
+    // asscessing the last element / recently pushed element
+
+    a.pop_back();
+    // removing the last element from vector a
 }

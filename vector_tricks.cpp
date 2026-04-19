@@ -21,4 +21,11 @@ void solve(){
     //reverse the vector 
     vector<int> reversed_v(v.rbegin(), v.rend()); 
     // Creates a reversed copy
-} 
+
+
+    rotate(a.begin(), a.begin() + x, a.end());
+    // rotate the array left shift by x units
+
+    rotate(a.begin(), a.begin() - x, a.end());
+    // rotate the array right shift by x units
+}

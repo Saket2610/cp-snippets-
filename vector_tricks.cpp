@@ -28,4 +28,7 @@ void solve(){
 
     rotate(a.begin(), a.begin() - x, a.end());
     // rotate the array right shift by x units
+
+    int x = ranges::min_element(a) - a.begin();
+    // index of the minimum element in the array a 
 }

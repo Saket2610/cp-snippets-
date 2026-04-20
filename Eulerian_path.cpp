@@ -1,4 +1,8 @@
-
+int m = 1;
+while (n - 1 > (m % 2 == 1 ? m * (m + 1) / 2 : m * m / 2 + 1)) {
+    m++;
+}
+// finding the m -> no of edges 
 std::vector<int> cur(2 * n);
 std::vector<bool> vis(n);
 auto dfs = [&](this auto &&self, int x) -> void {

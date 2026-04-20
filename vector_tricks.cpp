@@ -33,7 +33,7 @@ void solve(){
     // index of the minimum element in the array a 
 
     int x = a.back();
-    // asscessing the last element / recently pushed element
+    // asscessing the index of the last element / recently pushed element
 
     a.pop_back();
     // removing the last element from vector a

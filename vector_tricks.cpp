@@ -43,4 +43,7 @@ void solve(){
     // changes the size of vector a to n 
     // if a has extra elements more than n --> it automatically removes it;
 
+    array<int, 10> myarray;
+    myarray.fill(1); // Assigns 1 to every element
+    
 }

@@ -4,6 +4,8 @@ void solve(){
     int n;
     cin>>n;
     vector vec(2 , vector<int>(n));
+    // it gives me error in input
+    
     vector<vector<int>> vec1(2 , vector<int>(n));
    
 

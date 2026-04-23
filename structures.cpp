@@ -4,7 +4,7 @@ void solve(){
     int n;
     cin>>n;
     vector vec(2 , vector<int>(n));
-    // it gives me error in input
+    // bad for input // good for dp 
     
     vector<vector<int>> vec1(2 , vector<int>(n));
    

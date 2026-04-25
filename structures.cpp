@@ -7,7 +7,8 @@ void solve(){
     // bad for input // good for dp 
     
     vector<vector<int>> vec1(2 , vector<int>(n));
-   
+    // here we are creating n vectors 
+    // each vector gonna store 2 values
 
     vector<int> a[n];
     // n - vectors 

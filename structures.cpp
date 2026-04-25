@@ -5,6 +5,9 @@ void solve(){
     cin>>n;
     vector vec(2 , vector<int>(n));
     // bad for input // good for dp 
+
+    vector sh(n + 1, std::vector(m + 1, std::vector(r + 1, false)));
+    // for 3d DP
     
     vector<vector<int>> vec1(2 , vector<int>(n));
     // here we are creating n vectors 

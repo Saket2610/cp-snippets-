@@ -38,12 +38,15 @@ void solve(){
     a.pop_back();
     // removing the last element from vector a
 
-
     a.resize(n);
     // changes the size of vector a to n 
     // if a has extra elements more than n --> it automatically removes it;
 
     array<int, 10> myarray;
     myarray.fill(1); // Assigns 1 to every element
-    
-}
+
+    a.erase(unique(a.begin(), a.end()), a.end());
+    // removing unique elements from vector a
+
+
+

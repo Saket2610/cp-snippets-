@@ -5,4 +5,9 @@ auto dfs = [&](auto self, int x, int y, int z){
 
 function<i64(int, int)> f = [&](int x, int y) {
     // also for recurrsive function
-}
+};
+
+ auto dfs = [&](auto self, int x, int p) -> int {
+     
+ }
+

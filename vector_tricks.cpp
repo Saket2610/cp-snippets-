@@ -48,5 +48,7 @@ void solve(){
     a.erase(unique(a.begin(), a.end()), a.end());
     // removing unique elements from vector a
 
-
-
+    if (std::find(a.begin(), a.end(), target) != a.end()) {
+    // Found the element
+    }
+}

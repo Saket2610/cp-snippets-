@@ -10,4 +10,4 @@ function<i64(int, int)> f = [&](int x, int y) {
  auto dfs = [&](auto self, int x, int p) -> int {
      
  }
-
+int x = dfs(dfs, 0, -1);

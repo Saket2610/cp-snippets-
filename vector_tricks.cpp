@@ -8,6 +8,11 @@ void solve(){
     iota(p[j].begin(), p[j].end(), 0);
     // fill the vector p with 0 
 
+     if (std::count(A.begin(), A.end(), 1) == 0) {
+        std::cout << -1 << "\n";
+        return;
+    }
+    // searching for specific element in vector 
     
     std::sort(p[i].begin(), p[i].end(),
             [&](int x, int y) {

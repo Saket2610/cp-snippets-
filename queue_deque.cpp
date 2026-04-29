@@ -13,5 +13,5 @@ void solve(){
     cout<<q.front();
     q.pop();
     q.size();
-
+    q[0]; // refers to the first element in q
 }

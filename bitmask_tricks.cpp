@@ -21,3 +21,10 @@ cout << binaryToInt("0010");   // 2
 // stoi  31 bits
 // stol  31/63 bits
 // stoll 63 bits // safest 
+
+string a ; cin>>a;
+std::vector<int> A(n), B(n);
+    for (int i = 0; i < n; i++) {
+        A[i] = a[i] - '0';
+        B[i] = b[i] - '0';
+    }

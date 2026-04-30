@@ -54,6 +54,6 @@ void solve(){
     // removing unique elements from vector a
 
     if (std::find(a.begin(), a.end(), target) != a.end()) {
-    // Found the element
+    // Found the index of first matching element 
     }
 }

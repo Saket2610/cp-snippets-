@@ -27,20 +27,23 @@ using namespace std;
 // ─── Tarjan's SCC ────────────────────────────────────────────────────────────
  
 int n;                              // number of nodes (0-indexed)
-vector<vector<int>> adj;            // adjacency list
+vector<vector<int>> adj(n);            // adjacency list
  
 int  cnt  = 0;                      // DFS timer
 int  comp = 0;                      // SCC count
-vector<int> dfn, low, bel, stk;    // dfn/low/component/stack
- 
+vector<int> dfn(n, -1), low(n), bel(n, -1), stk;    // dfn/low/component/stack
+
+
+// auto dfs = [&](auto self, int x) -> void 
 void dfs(int x) {
     stk.push_back(x);
     dfn[x] = low[x] = cnt++;
  
-    for (int y : adj[x]) {
+    for (auto y : adj[x]) {
         if (dfn[y] == -1) {
             // Tree edge: recurse, then propagate low
             dfs(y);
+         // self(self,y);
             low[x] = min(low[x], low[y]);
         } else if (bel[y] == -1) {
             // Back edge (y still on stack): update low with dfn
@@ -59,20 +62,25 @@ void dfs(int x) {
         } while (y != x);
         comp++;
     }
-  
-    vector<int> deg(comp);
-    for (int i = 0; i < n; i++) {
-        for (auto j : adj[i]) {
-            if (bel[i] != bel[j]) {
-                deg[bel[j]]++;
+}
+
+// Returns in-degree of each SCC node in the condensation DAG.
+// Exactly 1 SCC with in-degree 0  →  unique reachable root exists.
+ // [SCC0] ──→ [SCC1] ──→ [SCC2]
+
+vector<int> condensation_indegree() {
+    vector<int> deg(comp, 0);
+    for (int u = 0; u < n; u++) {
+        for (int v : adj[u]) {
+            if (bel[u] != bel[v]) {
+                deg[bel[v]]++;
             }
         }
     }
-  // the above code find the in-degree of each scc
-  // its like we shrink the scc into a super node
-  // [SCC0] ──→ [SCC1] ──→ [SCC2]
-
+    return deg;
+    // returns a vector where the deg of scc is there 
 }
+
  
 void tarjan() {
     dfn.assign(n, -1);

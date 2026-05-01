@@ -1,4 +1,5 @@
 /**
+  https://codeforces.com/contest/1777/submission/190173475
  * Tarjan's Strongly Connected Components (SCC) Algorithm
  * -------------------------------------------------------
  * Finds all SCCs in a directed graph in O(V + E).

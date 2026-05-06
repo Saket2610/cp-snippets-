@@ -56,4 +56,13 @@ void solve(){
     if (std::find(a.begin(), a.end(), target) != a.end()) {
     // Found the index of first matching element 
     }
+
+
+    // tuple and vector
+    vector<tuple<int, int, int>> endpoints;
+    get<0>(endpoints[i])
+    // to get the first element in tuple
+
+
+
 }

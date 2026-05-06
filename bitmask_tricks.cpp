@@ -4,6 +4,10 @@ int la = a & -a;
 
 a / la = odd part of a 
 
+__builtin_parity(s) ? 1 : -1 
+// __builtin_parity(s) returns 1 if number of 1's in s is odd → determines sign in inclusion-exclusion.
+
+
 
 // Declares 100005 bits, all initialized to 0
 bitset<100005> f{};

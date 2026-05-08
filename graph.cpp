@@ -28,3 +28,15 @@ void solve(){
                  }
              }   
      }
+
+
+
+
+
+vector<std::tuple<int, int, int>> edges(m);
+edges[i] = {u, v, w};
+// Remove all edges that HAVE bit t set — they're useless now
+edges.erase(std::remove_if(edges.begin(), edges.end(), [&](auto e) {
+                return std::get<2>(e) >> t & 1;
+            }), edges.end());
+

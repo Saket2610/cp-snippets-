@@ -7,6 +7,8 @@ a / la = odd part of a
 __builtin_parity(s) ? 1 : -1 
 // __builtin_parity(s) returns 1 if number of 1's in s is odd → determines sign in inclusion-exclusion.
 
+__builtin_ctz(16) = 4;
+// 10000
 
 
 // Declares 100005 bits, all initialized to 0

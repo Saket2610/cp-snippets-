@@ -63,6 +63,9 @@ void solve(){
     get<0>(endpoints[i])
     // to get the first element in tuple
 
-
+    tuple<int, int, int> f2[10][10], f3[10][10][10];
+    f2[s[j] - '0'][s[j + 1] - '0'] = {j + 1, j + 2, i + 1};
+      if (i + 2 <= m && f2[s[i] - '0'][s[i + 1] - '0'] != std::tuple(0, 0, 0)) 
+          // checking if it contains in tuple 
 
 }

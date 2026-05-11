@@ -14,3 +14,11 @@ std::vector<int> Z(std::string s) {
     }
     return z;
 }
+auto z = Z(s);
+// z[i] = length of the longest prefix of s
+       // that matches the substring starting at i
+
+// z[0] = n
+// index: 0 1 2 3 4 5 6
+// char : a a a b a a b
+// z    : 7 2 1 0 3 1 0

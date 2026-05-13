@@ -50,5 +50,17 @@ void solve(){
         cout << *it << " ";
     }
     // Output: 30 20 10
+    set<int> s = {10, 20, 30, 40, 50};
+
+
+    
+    auto lb = s.lower_bound(30);  // first element >= 30 → points to 30
+    auto ub = s.upper_bound(30);  // first element >  30 → points to 40
+    auto eq = s.equal_range(30);  // returns pair<iterator, iterator> → {lb, ub}
+
+    cout << *lb;        // 30
+    cout << *ub;        // 40
+    cout << *eq.first;  // 30
+    cout << *eq.second; // 40
   
 }

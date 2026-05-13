@@ -1,9 +1,11 @@
+// multimap has the initial order of ascending order 
+
 void solve(){
     map<vector<int> , int> tree;
     if(tree.contains(a)){}
 
 
-    // multimap has the initial order of ascending order 
+    
     // same as map
     multimap<int,int> mp;
     multimap<int, int>::iterator itr;

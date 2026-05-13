@@ -27,8 +27,8 @@ void solve(){
     // Returns iterator to first element > key
 
     auto it = mp.end();
-    itr--;
-    x = itr->second;
+    it--;
+    x = it->second;
     // returns an iterator pointing one position after the last element
 
     mp.erase(key);

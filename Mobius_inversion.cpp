@@ -7,5 +7,8 @@ void solve(){
             mu[j] -= mu[i];
         }
     }
+    // μ(n)=(−1)^k n is product of k distinct primes
+    // μ(n)=0 n has a squared prime factor
+    // μ(1)=1 Base case
   
 }

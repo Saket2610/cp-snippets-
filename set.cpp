@@ -62,5 +62,23 @@ void solve(){
     cout << *ub;        // 40
     cout << *eq.first;  // 30
     cout << *eq.second; // 40
-  
+  /////
+    /////
+    /////
+    std::set<int> s = {10, 20, 30, 40, 50};
+
+    auto it = s.begin(); // Points to 10
+
+    // Get the next element (20)
+    auto it_next = std::next(it); 
+    
+    // Get the element 2 positions ahead (30)
+    auto it_plus_2 = std::next(it, 2); 
+
+    // Get the last element (50) by going back from end()
+    auto it_last = std::prev(s.end());
+
+    std::cout << "Next: " << *it_next << "\n";      // Output: 20
+    std::cout << "Plus 2: " << *it_plus_2 << "\n";  // Output: 30
+    std::cout << "Last: " << *it_last << "\n";      // Output: 50
 }

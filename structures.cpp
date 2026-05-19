@@ -41,4 +41,8 @@ void solve(){
     cin>>m;
     int a[m][m];
     // can take input 
+
+
+    vector <pair<int, int>> ax[N];
+    ax[x].push_back({y, c});
 }

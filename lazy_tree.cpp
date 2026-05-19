@@ -1,47 +1,46 @@
 // The segment tree is initialized to all zeros by default
 // A build() function is needed when you have pre-existing data to load into the tree
 
-int seg[4 * N], lazy[4 * N];
-
-// This is the standard lazy propagation flush — before using a node, apply any pending additions.
-void updlazy(int l, int r, int pos) {
-    seg[pos] += lazy[pos];   // Apply pending lazy update to this node
-    if (l == r) {
-        lazy[pos] = 0;        // Leaf node: clear lazy and return
-        return;
+class SegmentTree {
+private:
+    int n;
+    std::vector<int> mx, lazy;
+    void add(int p, int v) {
+        mx[p] += v;
+        lazy[p] += v;
     }
-    lazy[pos * 2]     += lazy[pos];   // Push lazy down to left child
-    lazy[pos * 2 + 1] += lazy[pos];   // Push lazy down to right child
-    lazy[pos] = 0;                     // Clear current node's lazy
-}
-// range update 
-// pos = root of segment tree / 1 
-void upd(int l, int r, int pos, int ql, int qr, int v) {
-    if (lazy[pos] != 0) updlazy(l, r, pos);  // Flush lazy before doing anything
-
-    if (l >= ql && r <= qr) {         // Current segment fully inside query range
-        seg[pos] += v;                 // Add v to this node
-        if (l != r) {
-            lazy[pos * 2]     += v;    // Propagate lazily to children
-            lazy[pos * 2 + 1] += v;
-        }
-        return;
-    } else if (l > qr || r < ql) return;  // No overlap — do nothing
-
-    int mid = (l + r) / 2;
-    upd(l, mid,     pos*2,   ql, qr, v);   // Recurse left
-    upd(mid+1, r,   pos*2+1, ql, qr, v);   // Recurse right
-    seg[pos] = min(seg[pos*2], seg[pos*2+1]); // Update current node from children
-}
+    void push(int p) {
+        add(2 * p, lazy[p]);
+        add(2 * p + 1, lazy[p]);
+        lazy[p] = 0;
+    }
+    void rangeAdd(int p, int l, int r, int x, int y, int v) {
+        if (l >= y || r <= x)
+            return;
+        if (l >= x && r <= y)
+            return add(p, v);
+        int m = (l + r) / 2;
+        push(p);
+        rangeAdd(2 * p, l, m, x, y, v);
+        rangeAdd(2 * p + 1, m, r, x, y, v);
+        mx[p] = std::max(mx[2 * p], mx[2 * p + 1]);
+    }
+    int rangeMax(int p, int l, int r, int x, int y) {
+        if (l >= y || r <= x)
+            return 0;
+        if (l >= x && r <= y)
+            return mx[p];
+        int m = (l + r) / 2;
+        push(p);
+        return std::max(rangeMax(2 * p, l, m, x, y), rangeMax(2 * p + 1, m, r, x, y));
+    }
+public:
+    SegmentTree(int n) : n(n), mx(4 * n), lazy(4 * n) {}
+    void rangeAdd(int l, int r, int v) {
+        rangeAdd(1, 0, n, l, r, v);
+    }
+    int rangeMax(int l, int r) {
+        return rangeMax(1, 0, n, l, r);
+    }
+};
  
-int query(int l, int r, int pos, int ql, int qr) {
-    if (lazy[pos] != 0) updlazy(l, r, pos);  // Flush lazy first
-    if (l >= ql && r <= qr) return seg[pos]; // Fully inside: return this node's min
-    else if (l > qr || r < ql) return INF;  // No overlap: return infinity
-
-    int mid = (l + r) / 2;
-    return min(
-        query(l, mid,   pos*2,   ql, qr),   // Min of left half
-        query(mid+1, r, pos*2+1, ql, qr)    // Min of right half
-    );
-}

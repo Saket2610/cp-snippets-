@@ -1,3 +1,6 @@
+// The segment tree is initialized to all zeros by default
+// A build() function is needed when you have pre-existing data to load into the tree
+
 int seg[4 * N], lazy[4 * N];
 
 // This is the standard lazy propagation flush — before using a node, apply any pending additions.

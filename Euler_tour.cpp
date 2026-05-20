@@ -7,5 +7,6 @@ std::vector<int> in(n), out(n), id(n);
             dfs1(v);
          }
         out[u] = timeStamp;
-    };
-    dfs1(0);
+};
+dfs1(0);
+// u is an ancestor of v in tree B if and only if in[u] <= in[v] < out[u]

@@ -17,4 +17,8 @@ void solve{
 
     int a = min_element(nums.begin(), nums.end()) - nums.begin();
     // returns the index of the min element 
+
+    std::mt19937_64 rng(std::chrono::steady_clock::now().time_since_epoch().count());
+    int a = rng();
+        
 }

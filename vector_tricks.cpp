@@ -21,7 +21,16 @@ void solve(){
     // stores index of sorted order of a 
     // a remains unchanged 
 
+    vector<std::array<int, 2>> a(n);
+    std::sort(a.begin(), a.end(),
+        [&](auto x, auto y) {
+            return x[0] + x[1] < y[0] + y[1];
+        });
+    // sort by min sum a[0][i] and a[1][i] 
 
+
+
+    
     reverse(a.begin() , a.end());
     //reverse the vector 
     vector<int> reversed_v(v.rbegin(), v.rend()); 

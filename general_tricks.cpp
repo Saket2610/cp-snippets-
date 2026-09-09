@@ -18,6 +18,9 @@ void solve{
     int a = min_element(nums.begin(), nums.end()) - nums.begin();
     // returns the index of the min element 
 
+    std::iota(p[j].begin(), p[j].end(), 0);
+    // fills the row j of vector p with zero 
+    
     std::mt19937_64 rng(std::chrono::steady_clock::now().time_since_epoch().count());
     int a = rng();
         

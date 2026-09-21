@@ -37,6 +37,9 @@ void solve(){
     // for saving edges of the graph with index
     // adj[u].push_back({v , i});
 
+    vector x(n, std::vector<std::array<int, 2>>(m));
+    // a 2-d vector of size n * m --each will contail an array of size 2 ;
+
     int m; 
     cin>>m;
     int a[m][m];

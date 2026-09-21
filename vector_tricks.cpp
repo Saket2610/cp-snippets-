@@ -28,7 +28,8 @@ void solve(){
         });
     // sort by min sum a[0][i] and a[1][i] 
 
-
+    sort(a.begin() , a.end() , greater<>());
+    // reverse sort an array 
 
     
     reverse(a.begin() , a.end());

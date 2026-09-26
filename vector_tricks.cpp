@@ -30,8 +30,11 @@ void solve(){
 
     sort(a.begin() , a.end() , greater<>());
     // reverse sort an array 
+    if (!std::is_sorted(a.begin(), a.end(), std::greater())) 
+    // to check if the array a is not sorted in decending order 
+        //   non ascending order 
 
-    
+        
     reverse(a.begin() , a.end());
     //reverse the vector 
     vector<int> reversed_v(v.rbegin(), v.rend()); 

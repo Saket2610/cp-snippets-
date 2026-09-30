@@ -35,6 +35,7 @@ vector<int> vx(N + 1);
 vector<std::vector<int>> e(N + 1);
 // Take x = 12 = 2² · 3¹.
 // After this, used = [2, 3], vx[2] = 2, vx[3] = 1.
+// e[2].push_back(2).
 void factor(int x, auto f) {
     while (x > 1) {
         int p = minp[x];

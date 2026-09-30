@@ -58,3 +58,7 @@ factor(x, [&](int p, int c) {
     use(p);
     vx[p] = c;
 });
+// vx[p]: one number per prime, from x
+// vx[p] is a single integer: the exponent of p in x. This is the v in our condition Σe − max = v. There is only one x per test case, so there is only one value per prime.
+// e[p]: a list per prime, from the a_i
+// e[p] is a vector: one entry for every a_i that is divisible by p, holding the exponent of p in that a_i. These are the caps c_i, the upper limits each voter can choose from. There are many voters, so there are many values per prime.

@@ -2,6 +2,17 @@ void solve(){
     vector<int> rev;
     vector<int> x;
 
+    
+    int a = max_element(nums.begin(), nums.end()) - nums.begin();
+    // returns the index of the max element
+
+    int a = min_element(nums.begin(), nums.end()) - nums.begin();
+    // returns the index of the min element 
+
+    std::iota(p[j].begin(), p[j].end(), 0);
+    // fills the row j of vector p with zero 
+
+    
     rev.insert(rev.end(), x.begin(), x.end());
     // adds vector x at the end of vector rev 
 

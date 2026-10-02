@@ -1,6 +1,7 @@
 // multimap has the initial order of ascending order 
-
-void solve(){
+// A map is used because k can be up to 10^15, so you can't index arrays by residue.
+    
+    void solve(){
     map<vector<int> , int> tree;
     if(tree.contains(a)){}
 

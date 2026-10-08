@@ -3,6 +3,10 @@ void solve(){
 
     int n;
     cin>>n;
+
+    std::array<std::vector<int>, 26> vec;
+    // 26 rows unfixed columns 
+
     vector vec(2 , vector<int>(n));
     // bad for input // good for dp 
 

@@ -81,7 +81,10 @@ void solve(){
     // Found the index of first matching element 
     }
 
+    vector<Z> dp(a.begin(), a.end());
+        // It builds a new vector dp of type Z (the modular integer struct) by copying every element of the int vector a.
 
+    
     // tuple and vector
     vector<tuple<int, int, int>> endpoints;
     get<0>(endpoints[i])

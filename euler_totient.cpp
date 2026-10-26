@@ -19,5 +19,10 @@ std::iota(phi.begin(), phi.end(), 0);
 
  // The sum of the totient values of all positive divisors \(d\) of \(n\) equals \(n\) itself:
 
+
 // the gcd is the sum of φ(d) over all common divisors d of x and y.
+
+
+// we can also compute euler_totient function via mobius function 
+// where μ is the Möbius function. That is why the code stores dp_mu[n] = Σ_{d|n} μ(d)/d (as a modular number), so that φ(n) = n · dp_mu[n].
 

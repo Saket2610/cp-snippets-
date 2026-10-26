@@ -16,3 +16,8 @@ std::iota(phi.begin(), phi.end(), 0);
 // 4	    1, 3	                2
 // 6	    1, 5	                2
 // 7	    1, 2, 3, 4, 5, 6	    6
+
+ // The sum of the totient values of all positive divisors \(d\) of \(n\) equals \(n\) itself:
+
+// the gcd is the sum of φ(d) over all common divisors d of x and y.
+

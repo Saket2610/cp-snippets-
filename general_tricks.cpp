@@ -13,6 +13,10 @@ void solve{
     std::cout << "LCM: " << std::lcm(a, b); // Output: 36
     cout << "GCD: " << gcd(a, b) << "\n";   // Output: 6 
 
+    
+    // parity(x XOR y) = parity(x) XOR parity(y)
+    
+    
     long long ans = std::numeric_limits<long long>::max();
     // This line of code initializes a variable named ans with the maximum possible value that a long long data type can hold in C++. 
     

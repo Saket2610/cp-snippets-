@@ -13,8 +13,7 @@ __builtin_ctz(16) = 4;
 // 10000
 
 
-bit_width(1010) = 4 
-
+bit_width(1010) = 4 = log2(1010) + 1
 
 
 // Declares 100005 bits, all initialized to 0

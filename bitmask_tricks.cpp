@@ -13,6 +13,10 @@ __builtin_ctz(16) = 4;
 // 10000
 
 
+bit_width(1010) = 4 
+
+
+
 // Declares 100005 bits, all initialized to 0
 bitset<100005> f{};
 f[500] = 1;

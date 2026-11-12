@@ -1,7 +1,11 @@
 int la = a & -a;
 // lowest set bit (1010 --> 2 (10)
 -a = ~a + 1 --> fact 
+lowbit(x) is the value of the rightmost set bit — e.g. lowbit(12) = lowbit(1100₂) = 4.
+///
 
+
+        
 a / la = odd part of a 
 
 __builtin_parity(s) ? 1 : -1 
